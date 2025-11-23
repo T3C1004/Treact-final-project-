@@ -30,8 +30,27 @@ a {
   display: inline;
   text-decoration: none;
 }
-img {
-  width: 100%;
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utility: apply to images that should always scale responsively */
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ensure avatars/logos with fixed dimensions preserve aspect ratio and don't distort */
+.testimonial__img,
+.nav__logo--img,
+.feature__img,
+.value__img,
+.footer__logo--img {
+  object-fit: cover;
 }
 h1 {
   font-size: 48px;
